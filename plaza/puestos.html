@@ -28,3 +28,145 @@ Ejercicio 08 · La letra
   - El mismo <link> de Google Fonts que en index.html.
 ============================================================
 -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuestros puestos · Sabores de la Plaza</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- La MISMA barra de navegación (solo cambia cuál enlace está "active") -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Sabores de la Plaza</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+              aria-expanded="false" aria-label="Mostrar menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" href="puestos.html">Puestos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <h1 class="mb-4">Nuestros puestos</h1>
+
+    <!-- Ejercicio 04: lateral angosto (3) + contenido ancho (9) = 12 en pantalla grande -->
+    <div class="row g-4">
+
+      <!-- Lateral con las 5 categorías -->
+      <aside class="col-12 col-lg-3">
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active">Frutas</a>
+          <a href="#" class="list-group-item list-group-item-action">Panadería</a>
+          <a href="#" class="list-group-item list-group-item-action">Almuerzos</a>
+          <a href="#" class="list-group-item list-group-item-action">Jugos</a>
+          <a href="#" class="list-group-item list-group-item-action">Café</a>
+        </div>
+      </aside>
+
+      <!-- Contenido: 1 tarjeta por fila en celular, 2 en tablet y 3 en computador -->
+      <section class="col-12 col-lg-9">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+          <!-- Cada tarjeta va en su propia columna; h-100 hace que todas midan lo mismo -->
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title h5">Frutas de Doña Rosa</h2>
+                <span class="badge text-bg-success">Nuevo</span>
+                <p class="card-text mt-2">Mango, papaya y banano recién llegados del campo.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <a href="contacto.html" class="btn btn-primary">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title h5">Panadería El Horno</h2>
+                <span class="badge text-bg-warning">Popular</span>
+                <p class="card-text mt-2">Pan de yuca, almojábanas y pan de bono calientes.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <a href="contacto.html" class="btn btn-primary">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title h5">Almuerzos Casa Mía</h2>
+                <span class="badge text-bg-info">Del día</span>
+                <p class="card-text mt-2">Sopa, seco y jugo: el corrientazo como en casa.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <a href="contacto.html" class="btn btn-primary">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title h5">Jugos y Café</h2>
+                <span class="badge text-bg-danger">Sin conservantes</span>
+                <p class="card-text mt-2">Jugos naturales y café de origen, molido al momento.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <a href="contacto.html" class="btn btn-primary">Pedir</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Ejercicio 05: tabla de precios (clase table, thead y 3+ productos) -->
+    <h2 class="h4 mt-5">Lista de precios</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Puesto</th>
+            <th scope="col">Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Canasta de mango</td><td>Frutas de Doña Rosa</td><td>$12.000</td></tr>
+          <tr><td>Pan de yuca (6 unidades)</td><td>Panadería El Horno</td><td>$7.000</td></tr>
+          <tr><td>Almuerzo del día</td><td>Almuerzos Casa Mía</td><td>$15.000</td></tr>
+          <tr><td>Jugo natural</td><td>Jugos y Café</td><td>$6.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">Sabores de la Plaza · Plaza de mercado, Bogotá</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
